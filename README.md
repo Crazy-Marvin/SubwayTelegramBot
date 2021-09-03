@@ -24,12 +24,12 @@ This [bot](http://t.me/SubwayBot) shows you the Sub of the Day.
 - [MariaDB](https://mariadb.org/) database
 - [Healthchecks](https://healthchecks.io/#php) URL (optional)
 
-# Contributing
+### Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 Please make sure to update tests as appropriate.
 More details may be found in the [CONTRIUBTING.md](https://github.com/Crazy-Marvin/SubwayTelegramBot/tree/trunk/.github/CONTRIBUTING.md).
 
-# License
+### License
 
 [MIT](https://choosealicense.com/licenses/mit/)
