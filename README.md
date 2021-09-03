@@ -6,7 +6,7 @@
 [![Latest tag](https://img.shields.io/github/tag/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/tags)
 [![Issues](https://img.shields.io/github/issues/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/pulls)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8c456ffe4305419aac029af0d975122c)](https://www.codacy.com/gh/Crazy-Marvin/SubwayTelegramBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Crazy-Marvin/SubwayTelegramBot&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a9ec4ee98a93425ca8162b369adce3db)](https://www.codacy.com/gh/Crazy-Marvin/SubwayTelegramBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Crazy-Marvin/SubwayTelegramBot&amp;utm_campaign=Badge_Grade)
 [![PHP Dependencies](https://badgen.net/badge/icon/dependabot?icon=dependabot&label)](https://getcomposer.org/)
 
 # Subway Telegram Bot
