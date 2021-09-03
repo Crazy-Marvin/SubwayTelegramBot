@@ -1,4 +1,5 @@
 [![Telegram New Game Releases Bot](https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram)](https://t.me/SubwayBot)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Crazy-Marvin/SubwayTelegramBot/ci)
 ![healthchecks.io](https://img.shields.io/endpoint?url=https%3A%2F%2Fhealthchecks.io%2Fbadge%2F396c7d03-faf7-4562-9f83-1194d0%2F31QvRDxH%2FSubway.shields)
 [![License](https://img.shields.io/github/license/Crazy-Marvin/SubwayTelegramBot)](https://github.com/Crazy-Marvin/SubwayTelegramBot/blob/trunk/LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/commits)
