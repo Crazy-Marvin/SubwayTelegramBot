@@ -17,8 +17,7 @@ This [bot](http://t.me/SubwayBot) shows you the Sub of the Day.
 
 - Token from [@Botfather](https://telegram.me/botfather)
 - SSL certificate (I recommend [Let's Encrypt](https://letsencrypt.org/))
-- Webserver running [PHP](https://www.php.net) (tested with [Apache](https://httpd.apache.org/) & [NGINX](https://www.nginx.com/) but others should work too)
-- [MariaDB](https://mariadb.org/) database
+- Webserver running [Python](https://www.python.org) (tested with [Apache](https://httpd.apache.org/) & [NGINX](https://www.nginx.com/) but others should work too)
 - [Healthchecks](https://healthchecks.io/#php) URL (optional)
 
 # Contributing
