@@ -1,4 +1,4 @@
-[![Telegram New Game Releases Bot](https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram)](https://t.me/SubwayBot)
+[![Telegram Subway Bot](https://img.shields.io/badge/Telegram-Bot-blue?logo=telegram)](https://t.me/SubwayBot)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Crazy-Marvin/SubwayTelegramBot/ci)
 ![healthchecks.io](https://img.shields.io/endpoint?url=https%3A%2F%2Fhealthchecks.io%2Fbadge%2F396c7d03-faf7-4562-9f83-1194d0%2F31QvRDxH%2FSubway.shields)
 [![License](https://img.shields.io/github/license/Crazy-Marvin/SubwayTelegramBot)](https://github.com/Crazy-Marvin/SubwayTelegramBot/blob/trunk/LICENSE)
@@ -8,9 +8,8 @@
 [![Issues](https://img.shields.io/github/issues/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/pulls)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/a9ec4ee98a93425ca8162b369adce3db)](https://www.codacy.com/gh/Crazy-Marvin/SubwayTelegramBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Crazy-Marvin/SubwayTelegramBot&amp;utm_campaign=Badge_Grade)
-[![PHP Dependencies](https://badgen.net/badge/icon/dependabot?icon=dependabot&label)](https://getcomposer.org/)
+[![Dependabot](https://badgen.net/badge/icon/dependabot?icon=dependabot&label)](https://python.org/)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/Crazy-Marvin/SubwayTelegramBot)
-[![StyleCI](https://github.styleci.io/repos/402841855/shield?branch=development&style=flat)](https://github.styleci.io/repos/402841855?branch=development)
 
 # Subway Telegram Bot
 

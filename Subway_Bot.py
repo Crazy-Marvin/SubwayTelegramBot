@@ -5,12 +5,6 @@ dotenv.load_dotenv()
 
 API_KEY = os.getenv("API_KEY") # your Token from @Botfather
 my_id = os.getenv("my_id") # your personal chat ID
-healthchecks = os.getenv("healthchecks") # your healthchecks.io URL
-
-try:
-    requests.get("healthchecks", timeout=300)
-except requests.RequestException as e:
-    print("Ping failed: %s" % e)
 
 welcome_stk = "CAACAgIAAxkBAAN6YQg3tT0d6WxU_lo-bUquFOv0Qh8AAgUAA8A2TxP5al-agmtNdSAE"
 thanks_stk = "CAACAgIAAxkBAAM_YQgjN81oKkVQl3LNKKt69sddvbwAAhcAA1m7_CX7oZ-xASU7NiAE"
