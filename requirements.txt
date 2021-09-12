@@ -1,0 +1,4 @@
+requests
+pytelegrambotapi
+python-dotenv
+autopep8
