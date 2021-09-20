@@ -6,6 +6,7 @@ dotenv.load_dotenv()
 
 API_KEY = os.getenv("API_KEY") # your Token from @Botfather
 my_id = os.getenv("my_id") # your personal chat ID
+analyst_id = os.getenv("analyst_id") # your analyst chat ID
 
 welcome_stk = "CAACAgIAAxkBAAN6YQg3tT0d6WxU_lo-bUquFOv0Qh8AAgUAA8A2TxP5al-agmtNdSAE"
 thanks_stk = "CAACAgIAAxkBAAM_YQgjN81oKkVQl3LNKKt69sddvbwAAhcAA1m7_CX7oZ-xASU7NiAE"
@@ -120,9 +121,9 @@ https://forms.gle/UnS4hcFamKmDsAKL8 \n\nPlease fill out this Google Form☝🏻"
 @subway_bot.message_handler(commands=['logs'])
 def logs(message):
 
-    if message.chat.id == 32752003 or message.chat.id == 1102062117:
-        
-        subway_bot.send_message(message.chat.id, f"Check out the *[ANALYTICS](https://docs.google.com/spreadsheets/d/e/2PACX-1vQIbCGPSYxdQH7NBqpCTsr2ZqNWO-DFz_Kerzn8pBJF2b4vjdopTrzrmm4kJQC5VlbkBn0oeGFtAoqG/pub?gid=1014381584&single=true&output=pdf)* for the month\.",parse_mode="MarkdownV2",disable_web_page_preview=True)
+    if message.chat.id == os.getenv('my_id') or message.chat.id == os.getenv('analyst_id'):
+        spreadsheet_url = os.getenv('spreadsheet_url')  # spreadsheet url
+        subway_bot.send_message(message.chat.id, f"Check out the *[ANALYTICS]({spreadsheet_url})* for the month\.",parse_mode="MarkdownV2",disable_web_page_preview=True)
 
 @subway_bot.message_handler(content_types='text')
 def day(message):
