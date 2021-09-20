@@ -1,10 +1,12 @@
-import telebot, dotenv, os, requests
+import telebot, dotenv, os, requests, gspread
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from oauth2client.service_account import ServiceAccountCredentials
 
 dotenv.load_dotenv()
 
 API_KEY = os.getenv("API_KEY") # your Token from @Botfather
 my_id = os.getenv("my_id") # your personal chat ID
+analyst_id = os.getenv("analyst_id") # your analyst chat ID
 
 welcome_stk = "CAACAgIAAxkBAAN6YQg3tT0d6WxU_lo-bUquFOv0Qh8AAgUAA8A2TxP5al-agmtNdSAE"
 thanks_stk = "CAACAgIAAxkBAAM_YQgjN81oKkVQl3LNKKt69sddvbwAAhcAA1m7_CX7oZ-xASU7NiAE"
@@ -41,8 +43,23 @@ day_commands = ['monday', 'montag', 'সোমবার', 'tuesday', 'dienstag',
 
 subway_bot = telebot.TeleBot(API_KEY)
 
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
+"https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
+client = gspread.authorize(creds)
+
+analytics_SUBWAY_BOT = client.open("ANALYTICS").worksheet("SUBWAY_BOT")
+database = client.open("SUBWAY BOT DATABASE").worksheet("DATABASE")
+
 @subway_bot.message_handler(commands=['start'])
 def send_hello(message):
+
+    col = database.col_values(1)
+
+    if str(message.chat.id) not in col:
+        database.append_row([message.chat.id])
+        analytics_SUBWAY_BOT.update_acell('F10', str(len(database.col_values(1))).replace("'"," "))
 
     mark_up = InlineKeyboardMarkup()
     B1 = InlineKeyboardButton(text='SUB OF THE DAY!', callback_data = 'sub')
@@ -54,6 +71,8 @@ def send_hello(message):
     mark_up.row(B3,B4)
 
     subway_bot.send_sticker(message.chat.id, welcome_stk, reply_markup=mark_up)
+    start_count = analytics_SUBWAY_BOT.acell('F3').value
+    analytics_SUBWAY_BOT.update_acell('F3',str(int(start_count)+1).replace("'"," "))
 
 @subway_bot.message_handler(commands=['sub'])
 def sub(message):
@@ -65,6 +84,8 @@ def sub(message):
     subway_bot.send_message(message.chat.id,"Check out the *SUB OF THE DAY\! 😋👇🏻*",parse_mode='MarkdownV2')
     sub = sub_of_the_day[day]
     subway_bot.send_photo(message.chat.id, sub)
+    sub_count = analytics_SUBWAY_BOT.acell('F4').value
+    analytics_SUBWAY_BOT.update_acell('F4',str(int(sub_count)+1).replace("'"," "))
 
 @subway_bot.message_handler(commands=['menu'])
 def menu(message):
@@ -72,6 +93,8 @@ def menu(message):
     subway_bot.send_photo(message.chat.id, menu_id)
     subway_bot.send_message(message.chat.id, "For more details visit: *[SUBWAY GERMANY]\
 (https://www.subway.com/de-DE/MenuNutrition/Menu/Sub-of-the-Day)*", parse_mode='MarkdownV2', disable_web_page_preview=True)
+    menu_count = analytics_SUBWAY_BOT.acell('F5').value
+    analytics_SUBWAY_BOT.update_acell('F5',str(int(menu_count)+1).replace("'"," "))
 
 @subway_bot.message_handler(commands=['contact'])
 def contact(message):
@@ -83,6 +106,8 @@ Issue: https://github\.com/Crazy\-Marvin/SubwayTelegramBot/issues\n
 Source: https://github\.com/Crazy\-Marvin/SubwayTelegramBot
 '''
     subway_bot.send_message(message.chat.id, contact_info,parse_mode='MarkdownV2')
+    contact_count = analytics_SUBWAY_BOT.acell('F6').value
+    analytics_SUBWAY_BOT.update_acell('F6',str(int(contact_count)+1).replace("'"," "))
 
 @subway_bot.message_handler(commands=['feedback'])
 def feedback(message):
@@ -90,12 +115,23 @@ def feedback(message):
     subway_bot.send_message(message.chat.id,"Want to give us a feedback?\n\n\
 https://forms.gle/UnS4hcFamKmDsAKL8 \n\nPlease fill out this Google Form☝🏻")
     subway_bot.send_sticker(message.chat.id, thanks_stk)
+    feedback_count = analytics_SUBWAY_BOT.acell('F7').value
+    analytics_SUBWAY_BOT.update_acell('F7',str(int(feedback_count)+1).replace("'"," "))
+
+@subway_bot.message_handler(commands=['logs'])
+def logs(message):
+
+    if message.chat.id == os.getenv('my_id') or message.chat.id == os.getenv('analyst_id'):
+        spreadsheet_url = os.getenv('spreadsheet_url')  # spreadsheet url
+        subway_bot.send_message(message.chat.id, f"Check out the *[ANALYTICS]({spreadsheet_url})* for the month\.",parse_mode="MarkdownV2",disable_web_page_preview=True)
 
 @subway_bot.message_handler(content_types='text')
 def day(message):
     if (message.text).lower() in day_commands:
         sub = sub_of_the_day[(message.text).upper()]
         subway_bot.send_photo(message.chat.id,sub)
+        sub_count = analytics_SUBWAY_BOT.acell('F4').value
+        analytics_SUBWAY_BOT.update_acell('F4',str(int(sub_count)+1).replace("'"," "))
     else:
         subway_bot.send_message(message.chat.id, "Umm...I really don't know how to respond to this message.")
         subway_bot.send_sticker(message.chat.id, umm_stk)
