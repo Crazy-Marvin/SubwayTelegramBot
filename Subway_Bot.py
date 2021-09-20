@@ -7,6 +7,9 @@ dotenv.load_dotenv()
 API_KEY = os.getenv("API_KEY") # your Token from @Botfather
 my_id = os.getenv("my_id") # your personal chat ID
 analyst_id = os.getenv("analyst_id") # your analyst chat ID
+creds_location = os.getenv("creds_location")
+forms_url = os.getenv("forms_url")  # your URL to the Google Forms for feedback
+spreadsheet_url = os.getenv("spreadsheet_url") # your URL to the Google Spreadsheet for analytics
 
 welcome_stk = "CAACAgIAAxkBAAN6YQg3tT0d6WxU_lo-bUquFOv0Qh8AAgUAA8A2TxP5al-agmtNdSAE"
 thanks_stk = "CAACAgIAAxkBAAM_YQgjN81oKkVQl3LNKKt69sddvbwAAhcAA1m7_CX7oZ-xASU7NiAE"
@@ -113,7 +116,7 @@ Source: https://github\.com/Crazy\-Marvin/SubwayTelegramBot
 def feedback(message):
 
     subway_bot.send_message(message.chat.id,"Want to give us a feedback?\n\n\
-https://forms.gle/UnS4hcFamKmDsAKL8 \n\nPlease fill out this Google Form☝🏻")
+{forms_url} \n\nPlease fill out this Google Form☝🏻")
     subway_bot.send_sticker(message.chat.id, thanks_stk)
     feedback_count = analytics_SUBWAY_BOT.acell('F7').value
     analytics_SUBWAY_BOT.update_acell('F7',str(int(feedback_count)+1).replace("'"," "))
