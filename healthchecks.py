@@ -1,5 +1,7 @@
 import requests, time, os
 
+# maybe the schedule module (https://schedule.readthedocs.io/en/stable/) would be nice too 🤔
+
 API_KEY = os.getenv("API_KEY")
 ID = os.getenv("ID")
 MSG = ""
