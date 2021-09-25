@@ -7,21 +7,22 @@
 [![Latest tag](https://img.shields.io/github/tag/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/tags)
 [![Issues](https://img.shields.io/github/issues/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/Crazy-Marvin/SubwayTelegramBot.svg?style=flat)](https://github.com/Crazy-Marvin/SubwayTelegramBot/pulls)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a9ec4ee98a93425ca8162b369adce3db)](https://www.codacy.com/gh/Crazy-Marvin/SubwayTelegramBot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Crazy-Marvin/SubwayTelegramBot&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a9ec4ee98a93425ca8162b369adce3db)](https://www.codacy.com/gh/Crazy-Marvin/SubwayTelegramBot/dashboard?utm_source=github.com&utm_medium=referral&utm_content=Crazy-Marvin/SubwayTelegramBot&utm_campaign=Badge_Grade)
 [![Dependabot](https://badgen.net/badge/icon/dependabot?icon=dependabot&label)](https://python.org/)
 ![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/Crazy-Marvin/SubwayTelegramBot)
 [![Telegram Subway Bot](https://img.shields.io/badge/Python-yellow?logo=python)](https://t.me/SubwayBot)
 
 # Subway Telegram Bot
 
-This [bot](http://t.me/SubwayBot) shows you the Sub of the Day. 
+This [bot](http://t.me/SubwayBot) shows you the Sub of the Day.
 
 ### Requirements
 
 - Token from [@Botfather](https://telegram.me/botfather)
 - SSL certificate (I recommend [Let's Encrypt](https://letsencrypt.org/))
 - Webserver running [Python](https://www.python.org) (tested with [Apache](https://httpd.apache.org/) & [NGINX](https://www.nginx.com/) but others should work too)
-- [Healthchecks](https://healthchecks.io/#php) URL (optional)
+- [Sentry](https://docs.sentry.io/platforms/python/) key (optional)
+- [Healthchecks](https://healthchecks.io/#python) URL (optional)
 
 ### Contributing
 
