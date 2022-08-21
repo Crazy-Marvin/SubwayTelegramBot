@@ -21,6 +21,7 @@ This [bot](http://t.me/SubwayBot) shows you the Sub of the Day.
 - Token from [@Botfather](https://telegram.me/botfather)
 - SSL certificate (I recommend [Let's Encrypt](https://letsencrypt.org/))
 - Webserver running [Python](https://www.python.org) (tested with [Apache](https://httpd.apache.org/) & [NGINX](https://www.nginx.com/) but others should work too)
+- Google Cloud service account credentials (JSON) for accessing Google Sheets API & Google Drive API
 - [Sentry](https://docs.sentry.io/platforms/python/) key (optional)
 - [Healthchecks](https://healthchecks.io/#python) URL (optional)
 
