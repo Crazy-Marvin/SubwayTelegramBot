@@ -1,6 +1,6 @@
 requests==2.26.0
 requests-oauthlib==1.3.0
-pyTelegramBotAPI==4.0.1
+pyTelegramBotAPI==4.7.0
 python-dotenv==0.20.0
 autopep8
 google-auth==2.1.0
