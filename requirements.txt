@@ -16,7 +16,7 @@ pyasn1-modules==0.2.8
 pyparsing==2.4.7
 httplib2==0.19.1
 idna==3.2
-cachetools==4.2.2
+cachetools==5.2.0
 certifi==2021.5.30
 charset-normalizer==2.1.1
 sentry_sdk
