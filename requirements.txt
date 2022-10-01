@@ -15,7 +15,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pyparsing==2.4.7
 httplib2==0.19.1
-idna==3.2
+idna==3.4
 cachetools==5.2.0
 certifi==2022.9.24
 charset-normalizer==2.1.1
