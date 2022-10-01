@@ -17,6 +17,6 @@ pyparsing==2.4.7
 httplib2==0.19.1
 idna==3.2
 cachetools==5.2.0
-certifi==2021.5.30
+certifi==2022.9.24
 charset-normalizer==2.1.1
 sentry_sdk
